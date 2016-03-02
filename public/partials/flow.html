@@ -1,0 +1,67 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="FlowController as flow">
+    <h1 class="page-header">Cadastro de fluxo de caixa</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-1 control-label">Tipo</label>
+            <div class="col-sm-11">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="T">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-1 control-label">Membro</label>
+            <div class="col-sm-11">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-1 control-label">Data</label>
+            <div class="col-sm-11">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-1 control-label">Valor</label>
+            <div class="col-sm-11">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-7">
+                <button type="submit" class="btn btn-primary">gravar</button>
+                <button type="submit" class="btn btn-danger">cancelar</button>
+            </div>
+        </div>
+    </form>
+    <br/>
+    <h1 class="page-header">Lista de fluxo de caixa</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fluxo</th>
+                    <th>Tipo</th>
+                    <th>Membro</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="i in flow.teste">
+                    <td>ID</td>
+                    <td>Entrada</td>
+                    <td>Dizimo</td>
+                    <td>Max</td>
+                    <td>15/09/1988</td>
+                    <td>R$400,00</td>
+                    <td>
+                        <edit-button></edit-button>
+                        <delete-button></delete-button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

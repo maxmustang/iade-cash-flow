@@ -1,0 +1,28 @@
+<html ng-app="iade">
+    <head>
+        <base href="/">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/principalController.js"></script>
+        <script src="js/controllers/flowController.js"></script>
+        <script src="js/directives/directives.js"></script>
+        
+    </head>
+    <body>
+        <menu-principal></menu-principal>
+        <container>
+        <!--<div class="container-fluid" >
+            <div class="row">-->
+                <menu-lateral></menu-lateral>
+                <ng-view></ng-view>  
+            <!--</div>
+        </div>-->
+        </container>
+    </body>
+</html>
