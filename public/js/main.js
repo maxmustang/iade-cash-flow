@@ -1,8 +1,9 @@
 angular
     .module('iade', [ 
-        'ngRoute', 
-        'iade.directives',
-        'iade.flow.factory'
+        'ngRoute',
+        'iade.flow.factory', 
+        'iade.directives'
+        
     ])
     .config(Config)
     
