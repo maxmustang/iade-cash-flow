@@ -1,9 +1,13 @@
 angular
-    .module('iade.controllers', [])
+    .module('iade')
     .controller('FlowController', FlowController)
     
-function FlowController(){
-    var vm = this;
+    FlowController.$inject = ['flowBuilderService', 'userFactory']
     
-    vm.teste = [1,2,3,4,5,6]
+function FlowController(flowBuilderService, userFactory){
+    var vm = this;
+    vm.flowTypes = [ { id: 'in', name: 'Entrada' } , { id: 'out',name: 'Saida'} ]
+    vm.types = flowBuilderService.getTypes();
+    vm.latestFlows = flowBuilderService.getLatestFlows();
+    vm.users = userFactory.findUserByName()
 }

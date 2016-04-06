@@ -6,6 +6,8 @@ angular
     .directive('deleteButton', deleteButton)
     .directive('addButton', addButton)
     .directive('editButton', editButton)
+    .directive('formFlowField', formFlowField)
+    
     
     function addButton(){
         var ddo = {}
@@ -48,4 +50,16 @@ angular
         ddo.restrict = 'E'
         ddo.templateUrl = 'js/directives/html/menuLateral.html'
         return ddo
+    }
+    
+    function formFlowField(){
+        var ddo = {}
+        ddo.restrict = 'E'
+        ddo.transclude = true;  
+        ddo.templateUrl = 'js/directives/html/form/flow/field.html'
+        ddo.scope = {
+            id: '@',
+            name: '@'
+        }
+        return ddo;
     }
