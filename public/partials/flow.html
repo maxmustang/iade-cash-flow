@@ -22,6 +22,7 @@
         
         <form-flow-field id="member" name="Membro">
             <input type="text" auto-complete class="form-control" id="member" ng-model="vm.cashFlow.member"  placeholder="Nome do membro">    
+            {{vm.cashFlow.member}}
         </form-flow-field>
         
         <form-flow-field id="date" name="Data">
@@ -29,7 +30,7 @@
         </form-flow-field>
         
         <form-flow-field id="owner" name="Relator">
-            <input type="text" class="form-control" id="owner" ng-model="vm.cashFlow.owner"  placeholder="Membro que relatou o fluxos">    
+            <input type="text" auto-complete class="form-control" id="owner" ng-model="vm.cashFlow.owner"  placeholder="Membro que relatou o fluxos">    
         </form-flow-field>
         
         <form-flow-field id="value" name="Relator">
@@ -39,7 +40,7 @@
         
         <div class="form-group">
             <div class="col-sm-offset-5 col-sm-7">
-                <button type="submit" class="btn btn-primary">gravar</button>
+                <button type="submit" class="btn btn-primary" ng-click="vm.saveCashFlow()">gravar</button>
                 <button type="submit" class="btn btn-danger">cancelar</button>
             </div>
         </div>

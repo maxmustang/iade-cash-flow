@@ -1,3 +1,4 @@
+"use strict"
 angular
     .module('iade')
     .controller('FlowController', FlowController)
@@ -10,4 +11,25 @@ function FlowController(flowBuilderService, memberFactory){
     vm.types = flowBuilderService.getTypes();
     vm.latestFlows = flowBuilderService.getLatestFlows();
     vm.users = memberFactory.findByMemberName()
+    
+    
+    vm.saveCashFlow = saveCashFlow
+    
+    vm.editCashFlow = editCashFlow
+    
+     
+    function editCashFlow(id){
+       vm.cashFlow = vm.flowTypes.filter(function(f) {
+           f.id === id
+       })
+        
+    }
+    
+    function saveCashFlow(){
+        console.log(vm.cashFlow)
+        vm.latestFlows.push(vm.CashFlow)
+        vm.cashFlow = {}
+    }
+    
+    
 }

@@ -14,6 +14,9 @@ angular
             element.autocomplete({
                 source: function(request, response){
                     response(memberFactory.findByMemberName(1))
+                }, 
+                select: function(event, ui) {
+                    element.trigger('input')
                 }
             })
         }
